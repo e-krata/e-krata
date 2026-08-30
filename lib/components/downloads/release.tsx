@@ -18,7 +18,7 @@ export default function ReleaseCard ({ release }: any) {
             <div style={{ height: 16 }}>
               <DownloadIcon />
             </div>
-            {release.assets ? release.assets[0].download_count : '0'}
+           {release.assets?.[0]?.download_count ?? '0'}
           </div>
         </div>
       </div>
