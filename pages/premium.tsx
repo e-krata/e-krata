@@ -1,15 +1,17 @@
 // pages/premium.tsx
 
-export default function Premium({ data }) {
-  if (!data) {
-    return (
-      <div>
-        <h1>Premium</h1>
-        <p>Nem sikerült betölteni az adatokat.</p>
-      </div>
-    );
-  }
+import { GetServerSideProps } from "next";
 
+interface PremiumData {
+  description?: string;
+  [key: string]: any;
+}
+
+interface PremiumProps {
+  data: PremiumData;
+}
+
+export default function Premium({ data }: PremiumProps) {
   return (
     <div>
       <h1>Premium</h1>
@@ -18,23 +20,15 @@ export default function Premium({ data }) {
   );
 }
 
-export async function getServerSideProps() {
-  try {
-    const res = await fetch("https://sulinet.site.je/krata/api/premium");
+export const getServerSideProps: GetServerSideProps = async () => {
+  
+  const mockData: PremiumData = {
+    description: "A Premium funkciók hamarosan elérhetők lesznek.",
+  };
 
-    if (!res.ok) {
-      return { props: { data: null } };
-    }
-
-    const data = await res.json();
-
-    return {
-      props: { data },
-    };
-  } catch (e) {
-    console.error("Premium fetch failed:", e);
-    return {
-      props: { data: null },
-    };
-  }
-}
+  return {
+    props: {
+      data: mockData,
+    },
+  };
+};
