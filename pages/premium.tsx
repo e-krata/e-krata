@@ -2,7 +2,6 @@ import Footer from 'lib/components/footer'
 import FilcNavBar from 'lib/components/navbar'
 import GoalCard from 'lib/components/premium/goal_card'
 import PlanCard, { PremiumPerk } from 'lib/components/premium/plan_card'
-import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import KupakIcon from '../lib/components/icons/kupak.svg'
 import TintaIcon from '../lib/components/icons/tinta.svg'
@@ -15,11 +14,7 @@ const kupakPerksPrimary: PremiumPerk[] = [
 ]
 
 const kupakPerksSecondary: PremiumPerk[] = [
-  {
-    icon: '✨',
-    name: 'Prémium rang és csevegő a discord szerverünkön',
-    highlighted: false
-  },
+  { icon: '✨', name: 'Prémium rang és csevegő a discord szerverünkön', highlighted: false },
   { icon: '📬', name: 'Elsőbbségi segítségnyújtás', highlighted: false }
 ]
 
@@ -36,7 +31,13 @@ const tintaPerksSecondary: PremiumPerk[] = [
   { icon: '🕐', name: 'Korai hozzáférés új verziókhoz', highlighted: false }
 ]
 
-export default function Downloads({ sponsors }: any) {
+export default function Downloads() {
+  // Statikus, API nélkül
+  const sponsors = {
+    target: 100,
+    percentage: 100
+  }
+
   return (
     <>
       <Head>
@@ -54,9 +55,7 @@ export default function Downloads({ sponsors }: any) {
 
         <div className="mt-12 flex flex-col items-center justify-center h-full">
           <div className="flex flex-col md:gap-4 items-center justify-center">
-            <h1 className="md:text-7xl text-3xl font-extrabold">
-              Filc, csak több.
-            </h1>
+            <h1 className="md:text-7xl text-3xl font-extrabold">Filc, csak több.</h1>
 
             <h1
               className="md:text-8xl text-4xl font-extrabold"
@@ -85,8 +84,7 @@ export default function Downloads({ sponsors }: any) {
               title={
                 <span
                   style={{
-                    background:
-                      'linear-gradient(90deg, #F0BD0C 0%, #0CD070 100%)',
+                    background: 'linear-gradient(90deg, #F0BD0C 0%, #0CD070 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text'
@@ -95,9 +93,7 @@ export default function Downloads({ sponsors }: any) {
                   Kupak
                 </span>
               }
-              description={
-                'Szabd személyre a filcet és láss részletesebb statisztikákat.'
-              }
+              description={'Szabd személyre a filcet és láss részletesebb statisztikákat.'}
               gradient={'linear-gradient(90deg, #F0BD0C 0%, #0CD070 100%)'}
               sponsorUrl={'#'}
               perks={[...kupakPerksPrimary, ...kupakPerksSecondary]}
@@ -110,8 +106,7 @@ export default function Downloads({ sponsors }: any) {
               title={
                 <span
                   style={{
-                    background:
-                      'linear-gradient(90deg, #B816E0 0%, #17D1BB 100%)',
+                    background: 'linear-gradient(90deg, #B816E0 0%, #17D1BB 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text'
@@ -120,9 +115,7 @@ export default function Downloads({ sponsors }: any) {
                   Tinta
                 </span>
               }
-              description={
-                'Kényelmesebb órarend, asztali alkalmazás és célok kitűzése.'
-              }
+              description={'Kényelmesebb órarend, asztali alkalmazás és célok kitűzése.'}
               gradient={'linear-gradient(90deg, #B816E0 0%, #17D1BB 100%)'}
               sponsorUrl={'#'}
               perks={[...tintaPerksPrimary, ...tintaPerksSecondary]}
@@ -134,15 +127,4 @@ export default function Downloads({ sponsors }: any) {
       </div>
     </>
   )
-}
-
-export const getStaticProps: GetStaticProps = async ctx => {
-  const sponsorsRes = await fetch('https://sulinet.site.je/ekrata/api/sponsors')
-  const sponsors = await sponsorsRes.json()
-
-  return {
-    props: {
-      sponsors
-    }
-  }
 }
