@@ -24,7 +24,7 @@ export default function Home () {
           <div className={styles.container}>
             <m.img
               className='noselect z-20'
-              src={'/public/img/iphonecropped 2.png'}
+              src={'/img/iphonecropped 2.png'}
               alt='Filc'
               initial='hidden'
               animate='visible'
@@ -106,7 +106,7 @@ export default function Home () {
                   width={220}
                   height={250}
                   alt='Customize'
-                  src='/public/img/showcase/customize.svg'
+                  src='/img/showcase/customize.svg'
                 />
               </span>
             }

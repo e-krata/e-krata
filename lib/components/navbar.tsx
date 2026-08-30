@@ -80,7 +80,7 @@ export default function FilcNavBar () {
           <Link href='/'>
             <div style={{ width: 200 }} className='lg:w-auto'>
               <Image
-                src='/public/img/logo.svg'
+                src='/img/logo.svg'
                 alt='logo'
                 height={48}
                 width={48}
