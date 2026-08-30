@@ -55,7 +55,7 @@ export default function Home () {
                 }
               }}
             >
-              <h1>Egy nem hivatalos alkalmazás az eKréta rendszerhez</h1>
+              <h1>Egy hivatalos alkalmazás az eKráta rendszerhez</h1>
             </m.div>
             <m.div
               className={`noselect z-30 ${styles.title}`}
@@ -74,7 +74,7 @@ export default function Home () {
               }}
             >
               <h1 className={styles.highlight}>
-                Egy nem hivatalos alkalmazás az eKréta rendszerhez
+                Egy hivatalos alkalmazás az eKráta rendszerhez
               </h1>
             </m.div>
           </div>

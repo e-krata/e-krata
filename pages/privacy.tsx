@@ -26,16 +26,16 @@ export default function Privacy () {
             </h1>
             <div className='flex flex-col lg:text-xl justify-center gap-8 font-medium'>
               <p>
-                A Filc Napló egy kliensalkalmazás, segítségével az e-Kréta
+                A Filc Napló egy kliensalkalmazás, segítségével az e-Kráta
                 rendszeréből letöltheted és felhasználóbarát módon
                 megjelenítheted az adataidat. Tanulmányi adataid csak
-                közvetlenül az alkalmazás és a Kréta-szerverek között
+                közvetlenül az alkalmazás és a KRÁTA-szerverek között
                 közlekednek, titkosított kapcsolaton keresztül.
               </p>
               <p>
                 A Filc fejlesztői és üzemeltetői a tanulmányi adataidat
                 semmilyen célból nem másolják, nem tárolják és harmadik félnek
-                nem továbbítják. Ezeket így az e-Kréta Informatikai Zrt. kezeli,
+                nem továbbítják. Ezeket így az e-Kráta Informatikai Zrt. kezeli,
                 az ő tájékoztatójukat itt találod:
               </p>
               <Link
@@ -85,7 +85,7 @@ export default function Privacy () {
                 Az alkalmazás használatával jelzed, hogy ezt a tájékoztatót
                 tudomásul vetted.
               </p>
-              <p>Utolsó módosítás: 2021. 09. 25.</p>
+              <p>Utolsó módosítás: 2026. 08. 30.</p>
             </div>
           </div>
           <Footer />
