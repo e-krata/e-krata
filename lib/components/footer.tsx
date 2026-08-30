@@ -25,7 +25,7 @@ export default function Footer () {
         <div className='flex items-center gap-6'>
           <div className='lg:w-auto'>
             <Image
-              src='/img/logo.svg'
+              src='/public/img/logo.svg'
               alt='logo'
               height={48}
               width={48}
