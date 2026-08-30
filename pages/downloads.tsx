@@ -1,8 +1,21 @@
 // pages/downloads.tsx
 
+import { GetStaticProps } from "next";
 import { getReleases } from "../lib/github";
 
-export default function Downloads({ releases }) {
+interface Release {
+  id: number;
+  name: string;
+  assets?: {
+    browser_download_url: string;
+  }[];
+}
+
+interface DownloadsProps {
+  releases: Release[];
+}
+
+export default function Downloads({ releases }: DownloadsProps) {
   const latest = releases.slice(0, 5);
 
   return (
@@ -16,7 +29,7 @@ export default function Downloads({ releases }) {
       <ul>
         {latest.map((release) => (
           <li key={release.id}>
-            <a href={release.assets?.[0]?.browser_download_url}>
+            <a href={release.assets?.[0]?.browser_download_url || "#"}>
               {release.name}
             </a>
           </li>
@@ -26,7 +39,7 @@ export default function Downloads({ releases }) {
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const releases = await getReleases();
 
   return {
@@ -35,4 +48,4 @@ export async function getStaticProps() {
     },
     revalidate: 60,
   };
-}
+};
