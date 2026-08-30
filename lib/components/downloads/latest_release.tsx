@@ -28,7 +28,7 @@ export default function LatestReleaseCard ({ latest }: any) {
           <div style={{ height: 16 }}>
             <DownloadIcon />
           </div>
-          {latest.assets ? latest.assets[0].download_count : '0'}
+          {latest.assets?.[0]?.download_count ?? '0'}
         </div>
       </div>
       <ReactMarkdown className='mt-6'>{latest.body}</ReactMarkdown>
