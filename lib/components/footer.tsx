@@ -9,7 +9,7 @@ const connections: any[][] = [
     'Instagram',
     <InstagramIcon key='instagram' />
   ],
-  ['https://github.com/filc', 'Github', <GithubIcon key='github' />],
+  ['https://github.com/e-krata', 'Github', <GithubIcon key='github' />],
   ['https://filcnaplo.hu/discord', 'Discord', <DiscordIcon key='discord' />]
 ]
 
