@@ -56,14 +56,14 @@ const connectionItems: NavbarItem[] = [
   {
     color: '#222222',
     icon: <GithubIcon />,
-    href: 'https://github.com/filc',
+    href: 'https://github.com/e-krata',
     title: 'GitHub',
     defaultShow: true
   },
   {
     color: '#5865F2',
     icon: <DiscordIcon />,
-    href: 'https://filcnaplo.hu/discord',
+    href: 'https://sulinet.site.je/kratadiscord',
     title: 'Discord',
     defaultShow: true
   }

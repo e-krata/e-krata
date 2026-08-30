@@ -10,7 +10,7 @@ const connections: any[][] = [
     <InstagramIcon key='instagram' />
   ],
   ['https://github.com/e-krata', 'Github', <GithubIcon key='github' />],
-  ['https://filcnaplo.hu/discord', 'Discord', <DiscordIcon key='discord' />]
+  ['https://sulinet.site.je/kratadiscord', 'Discord', <DiscordIcon key='discord' />]
 ]
 
 export default function Footer () {

@@ -65,7 +65,7 @@ export default function Privacy () {
                 eszközödről. A küldés előtt megjelenő képernyőn a te
                 felelősséged átnézni a továbbításra kerülő adatsort. A
                 hibajelentéseket a Filc fejlesztői felületén és egy privát
-                Discord szobában tároljuk, ezekhez csak az app fejlesztői férnek
+                szobában tároljuk, ezekhez csak az app fejlesztői férnek
                 hozzá.
               </p>
               <p>
